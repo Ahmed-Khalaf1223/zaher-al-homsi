@@ -10,7 +10,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import logo from "/src/assets/images/logo-footer.png";
+import logo from "../../assets/images/logo.png";
 import SectionHeader from "../common/SectionHeader";
 
 export default function Testimonials() {

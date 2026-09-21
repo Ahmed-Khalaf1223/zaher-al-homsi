@@ -2,10 +2,10 @@ import { Box, Container, Grid, Paper, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import { useTranslation } from "react-i18next";
-import Features1 from "/src/assets/icons/Features1.png";
-import Features2 from "/src/assets/icons/Features2.png";
-import Features3 from "/src/assets/icons/Features3.png";
-import Features4 from "/src/assets/icons/Features4.png";
+import Features1 from "../../assets/icons/Features1.png";
+import Features2 from "../../assets/icons/Features2.png";
+import Features3 from "../../assets/icons/Features3.png";
+import Features4 from "../../assets/icons/Features4.png";
 
 const features = [
   {
@@ -162,8 +162,7 @@ export default function Features() {
                         width: { xs: 38, md: 50 },
                         height: { xs: 38, md: 50 },
                         objectFit: "contain",
-                        filter:
-                          "brightness(0) saturate(100%) invert(66%) sepia(48%) saturate(600%) hue-rotate(355deg) brightness(90%) contrast(90%)",
+                        filter: "brightness(0) saturate(100%) invert(66%) sepia(48%) saturate(600%) hue-rotate(355deg) brightness(90%) contrast(90%)",
                       }}
                     />
                   </Box>

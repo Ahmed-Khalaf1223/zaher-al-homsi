@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
-import coverHome1 from "/src/assets/images/cover-home1.png";
-import coverHome2 from "/src/assets/images/cover-home2.png";
+import coverHome1 from "../../assets/images/cover-home1.png";
+import coverHome2 from "../../assets/images/cover-home2.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -101,8 +101,7 @@ export default function HomeHero() {
                   height: "100%",
                   right: 0,
                   top: 0,
-                  background:
-                    "radial-gradient(circle at center, rgba(255,255,255,0.55), rgba(255,255,255,0))",
+                  background: "radial-gradient(circle at center, rgba(255,255,255,0.55), rgba(255,255,255,0))",
                   zIndex: 1,
                   pointerEvents: "none",
                 },

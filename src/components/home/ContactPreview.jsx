@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, TextField, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ContactPreview1 from "/src/assets/images/ContactPreview.png";
-import locationImage from "/src/assets/icons/location_img.png";
+import locationImage from "../../assets/icons/location_img.png";
 export default function ContactPreview({ showImage = true, showLocation = false }) {
   const { t, i18n } = useTranslation();
 

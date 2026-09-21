@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-import LogosSection1 from "/src/assets/icons/LogosSection1.png";
-import LogosSection2 from "/src/assets/icons/LogosSection2.png";
-import LogosSection3 from "/src/assets/icons/LogosSection3.png";
-import LogosSection4 from "/src/assets/icons/LogosSection4.png";
-import LogosSection5 from "/src/assets/icons/LogosSection5.png";
-import LogosSection6 from "/src/assets/icons/LogosSection6.png";
+import LogosSection1 from "../../assets/icons/LogosSection1.png";
+import LogosSection2 from "../../assets/icons/LogosSection2.png";
+import LogosSection3 from "../../assets/icons/LogosSection3.png";
+import LogosSection4 from "../../assets/icons/LogosSection4.png";
+import LogosSection5 from "../../assets/icons/LogosSection5.png";
+import LogosSection6 from "../../assets/icons/LogosSection6.png";
 
 import "swiper/css";
 
@@ -77,8 +77,7 @@ export default function LogosSection() {
                     maxHeight: { xs: 55, md: 65 },
                     objectFit: "contain",
                     ...(logo.filter && {
-                      filter:
-                        "brightness(0) saturate(100%) invert(67%) sepia(35%) saturate(650%) hue-rotate(355deg) brightness(90%) contrast(90%)",
+                      filter: "brightness(0) saturate(100%) invert(67%) sepia(35%) saturate(650%) hue-rotate(355deg) brightness(90%) contrast(90%)",
                     }),
                   }}
                 />

@@ -22,10 +22,9 @@ export function Root() {
     </ThemeProvider>
   );
 }
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/zaher-al-homsi">
       <Root />
     </BrowserRouter>
   </React.StrictMode>,
