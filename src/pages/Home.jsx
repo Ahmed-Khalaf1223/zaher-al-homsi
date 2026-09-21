@@ -7,9 +7,9 @@ import PartnersPreview from "../components/home/PartnersPreview";
 import ContactPreview from "../components/home/ContactPreview";
 import LogosSection from "../components/home/LogosSection";
 
-import AboutPreview1 from "/src/assets/images/AboutPreview1.png";
-import AboutPreview2 from "/src/assets/images/AboutPreview2.png";
-import AboutPreview3 from "/src/assets/icons/AboutPreview3.png";
+import AboutPreview1 from "../assets/images/AboutPreview1.png";
+import AboutPreview2 from "../assets/images/AboutPreview2.png";
+import AboutPreview3 from "../assets/icons/AboutPreview3.png";
 
 import { useTranslation } from "react-i18next";
 
