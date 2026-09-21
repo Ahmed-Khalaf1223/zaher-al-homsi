@@ -6,7 +6,7 @@ import VerifiedOutlinedIcon from "@mui/icons-material/VerifiedOutlined";
 import TrendingUpOutlinedIcon from "@mui/icons-material/TrendingUpOutlined";
 import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined";
 
-import WhyUsImage from "../../assets/images/whyus.png";
+import WhyUsImage from "../../assets/images/whyUs.png";
 
 const items = [
   {
