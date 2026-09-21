@@ -1,0 +1,232 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "partners": "Our Partners",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "hero": {
+      "subtitle": "Zaher Al Homsi Group",
+      "title": "Partnership & Trust ... Beyond Limits",
+      "description": "We invest across diverse sectors and build leading partnerships that create sustainable value and drive growth across local and regional markets.",
+      "more": "Discover More",
+      "consultation": "Request a Consultation"
+    },
+    "about": {
+      "subtitle": "About Us",
+      "title": "Driving Success Through a Diverse Group of Leading Companies",
+      "description": "We are a holding company bringing together specialized businesses across diverse sectors, supporting their growth through strategic investment and commercial expansion. We strive to provide high-quality products and services that meet market needs and create sustainable value for our clients and partners.",
+      "shortDescription": "We are a holding company bringing together specialized businesses across diverse sectors, supporting their growth through strategic investment and commercial expansion.",
+      "more": "Learn More",
+      "experience": "Years of Experience"
+    },
+    "features": {
+      "subtitle": "Simple Steps",
+      "title": "Driving Business Success Through Experience and Integrated Vision",
+      "description": "We own a group of specialized companies operating across diverse sectors, striving to achieve sustainable growth through strategic investment, innovation, and providing products and services that meet the needs of different markets.",
+      "more": "Read More",
+      "items": {
+        "subsidiaries": {
+          "title": "Subsidiary Companies",
+          "description": "We bring together a group of specialized companies that operate according to the highest standards of quality and excellence across various sectors."
+        },
+        "investment": {
+          "title": "Investment & Development",
+          "description": "We continuously develop our businesses through well-planned investments that respond to market needs and growth opportunities."
+        },
+        "partnerships": {
+          "title": "Strategic Partnerships",
+          "description": "We build long-term relationships and partnerships that strengthen our business success and support our continued expansion."
+        },
+        "products": {
+          "title": "Diverse Products & Services",
+          "description": "We provide a wide range of products and services that meet the needs of individuals and businesses with high standards of quality."
+        }
+      }
+    },
+    "whyUs": {
+      "subtitle": "Our Values",
+      "title": "Why Choose Zaher Al-Homsi Group?",
+      "description": "We rely on experience, professionalism, and innovation, while focusing on integrity and punctuality in managing our companies, enabling us to deliver real value to our clients and partners and achieve sustainable results across various sectors.",
+
+      "quality": {
+        "title": "Quality & Excellence",
+        "description": "Commitment to the highest standards of quality in our products and services."
+      },
+
+      "experience": {
+        "title": "Experience & Professionalism",
+        "description": "A specialized team with diverse expertise supporting the success of the Group's businesses."
+      },
+
+      "development": {
+        "title": "Sustainable Growth",
+        "description": "Strategic investments that ensure continuous development and long-term growth."
+      },
+
+      "diversity": {
+        "title": "Sector Diversity",
+        "description": "A strong presence across various sectors and markets."
+      }
+    },
+    "partners": {
+      "title": "Our Authorized Agencies",
+      "subtitle": "Partners We Are Proud to Work With",
+      "detailsTitle": "Partner Details",
+      "exploreProducts": "Explore Our Products",
+      "description": "We are proud to represent a distinguished group of companies and brands, delivering their products and services with the highest standards of quality, accuracy, and professionalism to meet our clients' needs and support their success.",
+      "notFound": "Partner not found",
+      "back": "Back to Partners",
+      "visitWebsite": "Visit Website",
+      "items": {
+        "mando": {
+          "title": "Mando",
+          "subtitle": "A Taste That Makes You Happy",
+          "description": "A company specialized in food bakery products, committed to providing high-quality products using carefully selected ingredients.",
+          "details": "We aim to meet consumer preferences by developing a diverse range of bakery products suitable for the whole family. We follow strict manufacturing and quality standards and aim to provide products that combine distinctive taste with high quality.",
+          "logo": "/src/assets/icons/partners1.png",
+
+          "features": [
+            {
+              "title": "High Quality",
+              "description": "Products with international standards",
+              "icon": "quality"
+            },
+            {
+              "title": "Advanced Technology",
+              "description": "Latest manufacturing technologies",
+              "icon": "technology"
+            },
+            {
+              "title": "Wide Coverage",
+              "description": "Available in more than 25 countries",
+              "icon": "global"
+            },
+            {
+              "title": "Integrated Solutions",
+              "description": "Integrated products and services",
+              "icon": "solutions"
+            }
+          ],
+
+          "website": "#"
+        },
+
+        "alSafa": {
+          "title": "Al Safa Water Group",
+          "subtitle": "Quality You Can Trust",
+          "description": "Al Safa Water Group is one of the leading companies in the production and distribution of pure drinking water.",
+          "details": "The company provides high-quality water products according to the highest safety and health standards, while focusing on meeting customer needs and providing outstanding service.",
+          "logo": "/src/assets/icons/partners2.png",
+
+          "features": [
+            {
+              "title": "High Quality",
+              "description": "Products meeting the highest standards",
+              "icon": "quality"
+            },
+            {
+              "title": "Long Experience",
+              "description": "Extensive experience in the water industry",
+              "icon": "technology"
+            },
+            {
+              "title": "Wide Coverage",
+              "description": "Serving a large number of customers",
+              "icon": "global"
+            },
+            {
+              "title": "Excellent Service",
+              "description": "Integrated solutions for customers",
+              "icon": "solutions"
+            }
+          ],
+
+          "website": "#"
+        },
+
+        "uniTrading": {
+          "title": "UNI Trading Cosmetics",
+          "subtitle": "Our Partner in the World of Beauty",
+          "description": "A company specialized in cosmetics and distinctive beauty products.",
+          "details": "The company provides a diverse range of cosmetic products that meet the needs of women and those interested in the beauty industry.",
+          "logo": "/src/assets/icons/partners3.png",
+
+          "features": [
+            {
+              "title": "High-Quality Products",
+              "description": "Carefully selected products",
+              "icon": "quality"
+            },
+            {
+              "title": "Diverse Products",
+              "description": "A wide range of products",
+              "icon": "technology"
+            },
+            {
+              "title": "Wide Coverage",
+              "description": "Available across multiple markets",
+              "icon": "global"
+            },
+            {
+              "title": "Integrated Solutions",
+              "description": "Integrated products and services",
+              "icon": "solutions"
+            }
+          ],
+
+          "website": "#"
+        }
+      },
+
+      "more": "View More"
+    },
+
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We are here to answer your inquiries and discuss opportunities for collaboration.",
+      "description": "Fill out the following form, and a member of our team will contact you as soon as possible.",
+      "form": {
+        "name": "Full Name",
+        "phone": "Phone Number",
+        "email": "Email Address",
+        "type": "Inquiry Type",
+        "notes": "Notes",
+        "submit": "Send"
+      }
+    },
+    "testimonials": {
+      "title": "Our Clients' Reviews",
+      "subtitle": "Building Trust Through Every Partnership",
+      "description": "We value the trust of our clients and always strive to provide services and solutions that meet their expectations. Their experiences reflect our commitment to quality and professionalism in every project we deliver.",
+      "items": {
+        "ahmed": {
+          "name": "Ahmed Mohamed",
+          "description": "Our experience has been excellent since the beginning of our cooperation. We experienced a high level of professionalism, fast response, and results that exceeded our expectations."
+        },
+        "mohamed": {
+          "name": "Mohamed Ali",
+          "description": "Professional service and an excellent experience. The team is cooperative and always focused on providing the best solutions."
+        },
+        "khaled": {
+          "name": "Khaled Ahmed",
+          "description": "A great experience and a successful partnership. We appreciate the quality and commitment throughout every stage of the work."
+        }
+      }
+    },
+    "location": {
+      "title": "Visit Our Headquarters",
+      "description": "We are pleased to welcome you at our headquarters and learn more about your needs.",
+      "imageAlt": "Company location",
+      "mapTitle": "Company location map"
+    }
+  },
+
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "address": "United Arab Emirates - Dubai",
+    "description": "We provide integrated business solutions that combine quality, reliability, and efficiency, while remaining committed to building long-term partnerships and delivering the best products and services to our clients."
+  }
+}
