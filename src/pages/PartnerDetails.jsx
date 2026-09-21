@@ -8,6 +8,10 @@ import { useTranslation } from "react-i18next";
 import Hero from "../components/common/Hero";
 import Partners_cover from "../assets/images/Partners_cover.jpg";
 
+import partners1 from "../assets/icons/partners1.png";
+import partners2 from "../assets/icons/partners2.png";
+import partners3 from "../assets/icons/partners3.png";
+
 const iconMap = {
   quality: VerifiedOutlined,
   technology: PrecisionManufacturingOutlined,
@@ -26,6 +30,14 @@ export default function PartnerDetails() {
     returnObjects: true,
   });
   const partner = partnersData[id];
+
+  const partnerLogos = {
+    mando: partners1,
+    alSafa: partners2,
+    uniTrading: partners3,
+  };
+
+  const partnerLogo = partnerLogos[id];
 
   if (!partner) {
     return (
@@ -138,7 +150,7 @@ export default function PartnerDetails() {
               >
                 <Box
                   component="img"
-                  src={partner.logo}
+                  src={partnerLogo}
                   alt={partner.title}
                   sx={{
                     width: "70%",
