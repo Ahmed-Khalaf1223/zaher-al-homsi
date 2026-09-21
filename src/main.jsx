@@ -24,7 +24,7 @@ export function Root() {
 }
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/zaher-al-homsi">
+    <BrowserRouter>
       <Root />
     </BrowserRouter>
   </React.StrictMode>,
