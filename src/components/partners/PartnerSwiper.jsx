@@ -12,6 +12,10 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import PartnerSwiperCard from "./PartnerSwiperCard";
 
+import partners1 from "../../assets/icons/partners1.png";
+import partners2 from "../../assets/icons/partners2.png";
+import partners3 from "../../assets/icons/partners3.png";
+
 export default function PartnerSwiper() {
   const { t, i18n } = useTranslation();
 
@@ -21,9 +25,16 @@ export default function PartnerSwiper() {
     returnObjects: true,
   });
 
+  const partnerLogos = {
+    mando: partners1,
+    alSafa: partners2,
+    uniTrading: partners3,
+  };
+
   const partners = Object.entries(partnersData).map(([id, partner]) => ({
     id,
     ...partner,
+    logo: partnerLogos[id],
   }));
 
   const loopPartners = [...partners, ...partners, ...partners, ...partners, ...partners];

@@ -1,5 +1,6 @@
 import { Box, Container } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import PartnerSwiper from "../partners/PartnerSwiper.jsx";
 import SectionHeader from "../common/SectionHeader.jsx";
@@ -46,8 +47,8 @@ export default function PartnersPreview() {
           }}
         >
           <Box
-            component="a"
-            href="/partners"
+            component={Link}
+            to="/partners"
             sx={{
               display: "inline-block",
               backgroundColor: "primary.main",

@@ -144,9 +144,21 @@ export default function Footer() {
             >
               {t("footer.contactInfo")}
             </Typography>
-            <Stack spacing={2} sx={{ width: "100%", maxWidth: 300, mx: { md: 0 }, mr: { xs: "auto" } }}>
+            <Stack
+              spacing={2}
+              sx={{ width: "100%", maxWidth: 300, mx: { md: 0 }, mr: { xs: isArabic ? "auto" : 0 }, ml: { xs: isArabic ? 0 : "auto" } }}
+            >
               {/* Address */}
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, width: "100%", direction: isArabic ? "rtl" : "ltr" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1.5,
+                  width: "100%",
+                  direction: isArabic ? "rtl" : "ltr",
+                  // justifyContent: { xs: "center", md: "flex-start" },
+                }}
+              >
                 <LocationOnOutlinedIcon color="primary" fontSize="small" sx={{ flexShrink: 0 }} />
                 <Typography sx={{ fontWeight: 600, fontSize: { xs: 14, md: 15 } }}>{t("footer.address")}</Typography>
               </Box>
