@@ -194,6 +194,28 @@ export default function HomeHero() {
                       flexWrap: "wrap",
                     }}
                   >
+                    {/* More Button */}
+                    <Button
+                      component={Link}
+                      to="/about"
+                      variant="contained"
+                      sx={{
+                        minWidth: { xs: 130, md: 165 },
+                        height: { xs: 45, md: 50 },
+                        px: 3,
+                        borderRadius: "10px",
+                        backgroundColor: "primary.main",
+                        color: "#fff",
+                        fontWeight: 700,
+                        fontSize: { xs: 13, md: 15 },
+                        boxShadow: "0 6px 18px rgba(201,154,69,0.35)",
+                        "&:hover": {
+                          backgroundColor: "rgb(182, 138, 53)",
+                        },
+                      }}
+                    >
+                      {t("home.hero.more")}
+                    </Button>
                     {/* Consultation Button */}
                     <Button
                       component={Link}
@@ -219,28 +241,6 @@ export default function HomeHero() {
                       }}
                     >
                       {t("home.hero.consultation")}
-                    </Button>
-                    {/* More Button */}
-                    <Button
-                      component={Link}
-                      to="/about"
-                      variant="contained"
-                      sx={{
-                        minWidth: { xs: 130, md: 165 },
-                        height: { xs: 45, md: 50 },
-                        px: 3,
-                        borderRadius: "10px",
-                        backgroundColor: "primary.main",
-                        color: "#fff",
-                        fontWeight: 700,
-                        fontSize: { xs: 13, md: 15 },
-                        boxShadow: "0 6px 18px rgba(201,154,69,0.35)",
-                        "&:hover": {
-                          backgroundColor: "rgb(182, 138, 53)",
-                        },
-                      }}
-                    >
-                      {t("home.hero.more")}
                     </Button>
                   </Box>
                 </Box>

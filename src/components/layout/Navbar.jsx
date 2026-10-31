@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "../../assets/images/logo.png";
 
-import { AppBar, Box, Button, Container, Drawer, IconButton, Stack, Toolbar, useMediaQuery, useTheme } from "@mui/material";
+import { AppBar, Box, Button, Container, Drawer, IconButton, Stack, ThemeProvider, Toolbar, useMediaQuery, useTheme } from "@mui/material";
 
 import { Facebook, Instagram, LinkedIn } from "@mui/icons-material";
 
@@ -141,40 +141,42 @@ export default function Navbar() {
       </AppBar>
 
       {/* ==================== Mobile Drawer ==================== */}
-      <Drawer anchor={isArabic ? "right" : "left"} open={open} onClose={closeDrawer}>
-        <Box dir={direction} sx={{ width: 280, height: "100%", p: 3 }}>
-          {/* Logo */}
-          <Box sx={{ width: 90, mb: 5, mx: "auto" }}>
-            <img src={logo} alt="Zaher Al Homsi" style={{ width: "100%", display: "block" }} />
-          </Box>
+      <ThemeProvider theme={(outerTheme) => ({ ...outerTheme, direction: "ltr" })}>
+        <Drawer anchor={isArabic ? "left" : "right"} open={open} onClose={closeDrawer}>
+          <Box dir={direction} sx={{ width: 280, height: "100%", p: 3 }}>
+            {/* Logo */}
+            <Box sx={{ width: 90, mb: 5, ml: isArabic ? "auto" : 0, mr: isArabic ? 0 : "auto" }}>
+              <img src={logo} alt="Zaher Al Homsi" style={{ width: "100%", display: "block" }} />
+            </Box>
 
-          {/* Navigation */}
-          <Stack spacing={1}>
-            {navItems.map((item) => (
-              <Button
-                key={item.path}
-                component={NavLink}
-                to={item.path}
-                onClick={closeDrawer}
-                sx={{
-                  justifyContent: "flex-start",
-                  color: "text.primary",
-                  fontSize: 15,
-                  borderRadius: 1,
-                  py: 1.2,
-                  "&.active": { color: "primary.main", backgroundColor: "#FAF4E8" },
-                }}
-              >
-                {item.label}
-              </Button>
-            ))}
-          </Stack>
-          {/* Language */}
-          <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid #eee" }}>
-            <LanguageSwitcher />
+            {/* Navigation */}
+            <Stack spacing={1}>
+              {navItems.map((item) => (
+                <Button
+                  key={item.path}
+                  component={NavLink}
+                  to={item.path}
+                  onClick={closeDrawer}
+                  sx={{
+                    justifyContent: "flex-start",
+                    color: "text.primary",
+                    fontSize: 15,
+                    borderRadius: 1,
+                    py: 1.2,
+                    "&.active": { color: "primary.main", backgroundColor: "#FAF4E8" },
+                  }}
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </Stack>
+            {/* Language */}
+            <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid #eee" }}>
+              <LanguageSwitcher />
+            </Box>
           </Box>
-        </Box>
-      </Drawer>
+        </Drawer>
+      </ThemeProvider>
     </>
   );
 }
