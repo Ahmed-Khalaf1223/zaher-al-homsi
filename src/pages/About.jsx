@@ -39,7 +39,7 @@ export default function About() {
           badgeHeight={{ xs: 110, sm: 115, md: 120 }}
           imageHeight={{ xs: 380, sm: 480, md: 550 }}
         />
-        <Features />
+        <Features showButton={false} />
         <WhyUs />
         <Testimonials />
         <LogosSection />

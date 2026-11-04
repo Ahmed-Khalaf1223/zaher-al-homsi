@@ -1,31 +1,17 @@
-import { Box, Button, Container, Grid, TextField, Typography } from "@mui/material";
+import { Box, Container, Grid, TextField, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ContactPreview1 from "/src/assets/images/ContactPreview.png";
 import locationImage from "../../assets/icons/location_img.png";
+import CustomButton from "../common/CustomButton";
 export default function ContactPreview({ showImage = true, showLocation = false }) {
   const { t, i18n } = useTranslation();
 
   const isArabic = i18n.language === "ar";
 
   return (
-    <Box
-      component="section"
-      dir={isArabic ? "rtl" : "ltr"}
-      sx={{
-        pb: {
-          xs: 6,
-          md: 8,
-        },
-      }}
-    >
+    <Box component="section" dir={isArabic ? "rtl" : "ltr"} sx={{ pb: { xs: 6, md: 8 } }}>
       <Container maxWidth="xl">
-        <Box
-          sx={{
-            backgroundColor: "#EAE2D3",
-            borderRadius: { xs: 1, md: 2 },
-            overflow: "hidden",
-          }}
-        >
+        <Box sx={{ backgroundColor: "#EAE2D3", borderRadius: { xs: 1, md: 2 }, overflow: "hidden" }}>
           <Grid container>
             {/* =========================
                 Image
@@ -61,7 +47,7 @@ export default function ContactPreview({ showImage = true, showLocation = false 
               >
                 {/* Header */}
                 <Box sx={{ textAlign: "center", mb: { xs: 3, md: 4 } }}>
-                  <Typography sx={{ fontSize: { xs: 24, md: 30 }, fontWeight: 800, color: "#171717", mb: 1.5 }}>{t("home.contact.title")}</Typography>
+                  <Typography sx={{ fontSize: { xs: 24, md: 24 }, fontWeight: 700, color: "#171717", mb: 1.5 }}>{t("home.contact.title")}</Typography>
 
                   <Typography sx={{ fontSize: { xs: 17, md: 20 }, fontWeight: 700, maxWidth: 500, color: "primary.main", mb: 2 }}>
                     {t("home.contact.subtitle")}
@@ -71,7 +57,6 @@ export default function ContactPreview({ showImage = true, showLocation = false 
                     {t("home.contact.description")}
                   </Typography>
                 </Box>
-
                 {/* Form */}
                 <Grid container spacing={2}>
                   {/* Full Name */}
@@ -147,7 +132,6 @@ export default function ContactPreview({ showImage = true, showLocation = false 
                       }}
                     />
                   </Grid>
-
                   {/* Notes */}
                   <Grid size={12}>
                     <TextField
@@ -163,23 +147,12 @@ export default function ContactPreview({ showImage = true, showLocation = false 
                       }}
                     />
                   </Grid>
-
                   {/* Button */}
                   <Grid size={12}>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        mt: 1,
-                      }}
-                    >
-                      <Button
-                        variant="contained"
+                    <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
+                      <CustomButton
+                        type="submit"
                         sx={{
-                          minWidth: { xs: 130, md: 160 },
-                          height: { xs: 45, md: 50 },
-                          borderRadius: 1,
-                          fontWeight: 700,
                           boxShadow: "none",
 
                           "&:hover": {
@@ -189,7 +162,7 @@ export default function ContactPreview({ showImage = true, showLocation = false 
                         }}
                       >
                         {t("home.contact.form.submit")}
-                      </Button>
+                      </CustomButton>
                     </Box>
                   </Grid>
                 </Grid>
@@ -227,8 +200,8 @@ export default function ContactPreview({ showImage = true, showLocation = false 
                     alt={t("home.location.imageAlt")}
                     sx={{ width: { xs: 40, md: 50 }, height: { xs: 40, md: 50 }, objectFit: "contain", mb: 2 }}
                   />
-                  <Typography sx={{ fontSize: { xs: 22, md: 26 }, fontWeight: 800, color: "#222", mb: 2 }}>{t("home.location.title")}</Typography>
-                  <Typography sx={{ fontSize: { xs: 14, md: 16 }, color: "text.secondary", lineHeight: 1.9, maxWidth: 420 }}>
+                  <Typography sx={{ fontSize: { xs: 12, md: 18 }, fontWeight: 700, color: "#222", mb: 2 }}>{t("home.location.title")}</Typography>
+                  <Typography sx={{ fontSize: { xs: 10, md: 14 }, color: "text.secondary", lineHeight: 1.9, maxWidth: 420 }}>
                     {t("home.location.description")}
                   </Typography>
                 </Box>

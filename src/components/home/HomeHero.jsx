@@ -10,6 +10,7 @@ import coverHome2 from "../../assets/images/cover-home2.png";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import CustomButton from "../common/CustomButton";
 
 export default function HomeHero() {
   const { t, i18n } = useTranslation();
@@ -138,8 +139,8 @@ export default function HomeHero() {
                   <Typography
                     component="h1"
                     sx={{
-                      fontWeight: 800,
-                      fontSize: { xs: 22, sm: 30, md: 42, lg: 55 },
+                      fontWeight: 700,
+                      fontSize: { xs: 7, sm: 10, md: 22, lg: 33 },
                       color: "#222",
                       mb: { xs: 1, md: 1.5 },
                     }}
@@ -154,7 +155,7 @@ export default function HomeHero() {
                     sx={{
                       color: "primary.main",
                       fontWeight: 700,
-                      fontSize: { xs: 20, md: 30 },
+                      fontSize: { xs: 20, md: 28 },
                       lineHeight: 1.25,
                       mb: { xs: 2, md: 2.5 },
                       textShadow: "0 3px 15px rgba(255,255,255,0.9)",
@@ -170,9 +171,9 @@ export default function HomeHero() {
                     component="p"
                     sx={{
                       color: "text.primary",
-                      fontSize: { xs: 15, md: 20 },
+                      fontSize: { xs: 10, md: 15 },
                       lineHeight: 2,
-                      maxWidth: 500,
+                      maxWidth: 600,
                       ml: isArabic ? "auto" : 0,
                       mr: isArabic ? 0 : "auto",
                       mb: { xs: 3, md: 4 },
@@ -195,53 +196,35 @@ export default function HomeHero() {
                     }}
                   >
                     {/* More Button */}
-                    <Button
-                      component={Link}
+                    <CustomButton
                       to="/about"
-                      variant="contained"
                       sx={{
-                        minWidth: { xs: 130, md: 165 },
-                        height: { xs: 45, md: 50 },
                         px: 3,
-                        borderRadius: "10px",
-                        backgroundColor: "primary.main",
-                        color: "#fff",
-                        fontWeight: 700,
-                        fontSize: { xs: 13, md: 15 },
                         boxShadow: "0 6px 18px rgba(201,154,69,0.35)",
-                        "&:hover": {
-                          backgroundColor: "rgb(182, 138, 53)",
-                        },
                       }}
                     >
                       {t("home.hero.more")}
-                    </Button>
+                    </CustomButton>
                     {/* Consultation Button */}
-                    <Button
-                      component={Link}
+                    <CustomButton
                       to="/contact"
                       variant="outlined"
                       sx={{
-                        minWidth: { xs: 130, md: 165 },
-                        height: { xs: 45, md: 50 },
                         px: 3,
-                        borderRadius: "10px",
                         border: "2px solid #C99A45",
                         color: "#C99A45",
                         backgroundColor: "rgba(255,255,255,0.65)",
                         backdropFilter: "blur(5px)",
-                        fontWeight: 700,
-                        fontSize: { xs: 13, md: 15 },
                         boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
                         "&:hover": {
                           backgroundColor: "rgb(197, 152, 80)",
-                          color: "rgb(255, 255, 255)",
+                          color: "#fff",
                           border: "2px solid rgb(197, 152, 80)",
                         },
                       }}
                     >
                       {t("home.hero.consultation")}
-                    </Button>
+                    </CustomButton>
                   </Box>
                 </Box>
               </Container>

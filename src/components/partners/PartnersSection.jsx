@@ -47,10 +47,7 @@ export default function PartnersSection() {
         <SectionHeader
           title={t("home.partners.title")}
           subtitle={t("home.partners.subtitle")}
-          description={t("home.partners.description")}
-          titleSize={{ xs: 20, md: 38 }}
-          subtitleSize={{ xs: 15, md: 24 }}
-          descriptionSize={{ xs: 14, md: 18 }}
+          description={t("home.partners.description")}s
           maxWidthTitle={600}
           maxWidthSubtitle={500}
           maxWidthDescription={850}

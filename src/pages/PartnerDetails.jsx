@@ -41,24 +41,9 @@ export default function PartnerDetails() {
 
   if (!partner) {
     return (
-      <Box
-        sx={{
-          minHeight: 500,
-          py: 12,
-          backgroundColor: "#F9F8F5",
-          textAlign: "center",
-        }}
-      >
+      <Box sx={{ minHeight: 500, py: 12, backgroundColor: "#F9F8F5", textAlign: "center" }}>
         <Container>
-          <Typography
-            sx={{
-              fontSize: 32,
-              fontWeight: 800,
-              mb: 3,
-            }}
-          >
-            {t("home.partners.notFound")}
-          </Typography>
+          <Typography sx={{ fontSize: 32, fontWeight: 800, mb: 3 }}>{t("home.partners.notFound")}</Typography>
 
           <Button component={Link} to="/partners" variant="contained">
             {t("home.partners.back")}
@@ -67,19 +52,10 @@ export default function PartnerDetails() {
       </Box>
     );
   }
-
   return (
     <>
       <Hero title={t("home.partners.detailsTitle")} image={Partners_cover} breadcrumb={[t("home.partners.detailsTitle")]} />
-
-      <Box
-        component="section"
-        dir={isArabic ? "rtl" : "ltr"}
-        sx={{
-          backgroundColor: "#F9F8F5",
-          py: { xs: 6, md: 8 },
-        }}
-      >
+      <Box component="section" dir={isArabic ? "rtl" : "ltr"} sx={{ backgroundColor: "#F9F8F5", py: { xs: 6, md: 8 } }}>
         <Container maxWidth="lg">
           {/* =========================
               Partner Information
@@ -87,48 +63,13 @@ export default function PartnerDetails() {
           <Grid container spacing={{ xs: 5, md: 8 }} alignItems="center">
             {/* Text */}
             <Grid size={{ xs: 12, md: 7 }}>
-              <Typography
-                sx={{
-                  fontSize: { xs: 15, md: 17 },
-                  fontWeight: 700,
-                  color: "#333",
-                  mb: 1,
-                }}
-              >
-                {partner.title}
-              </Typography>
-
-              <Typography
-                sx={{
-                  fontSize: { xs: 27, md: 36 },
-                  fontWeight: 800,
-                  color: "primary.main",
-                  mb: 2,
-                }}
-              >
-                {partner.subtitle}
-              </Typography>
-
-              <Typography
-                sx={{
-                  fontSize: { xs: 14, md: 16 },
-                  lineHeight: 2.2,
-                  color: "text.secondary",
-                  mb: 2,
-                }}
-              >
-                {partner.description}
-              </Typography>
-
-              <Typography
-                sx={{
-                  fontSize: { xs: 14, md: 15 },
-                  lineHeight: 2.2,
-                  color: "text.secondary",
-                }}
-              >
-                {partner.details}
-              </Typography>
+              <Typography sx={{ fontSize: { xs: 12, md: 15 }, fontWeight: 700, color: "#333", mb: 1 }}>{partner.title}</Typography>
+              <Typography sx={{ fontSize: { xs: 17, md: 26 }, fontWeight: 800, color: "primary.main", mb: 2 }}>{partner.subtitle}</Typography>
+              <Box>
+                <Typography sx={{ fontSize: { xs: 10, md: 14 }, lineHeight: 2.2, color: "text.secondary", mb: 2 }}>
+                  {partner.description} {partner.details}{" "}
+                </Typography>
+              </Box>
             </Grid>
             {/* Logo */}
             <Grid size={{ xs: 12, md: 5 }}>
@@ -152,12 +93,7 @@ export default function PartnerDetails() {
                   component="img"
                   src={partnerLogo}
                   alt={partner.title}
-                  sx={{
-                    width: "70%",
-                    maxWidth: 300,
-                    maxHeight: 230,
-                    objectFit: "contain",
-                  }}
+                  sx={{ width: "70%", maxWidth: 300, maxHeight: 230, objectFit: "contain" }}
                 />
               </Box>
             </Grid>
@@ -177,6 +113,7 @@ export default function PartnerDetails() {
                       py: 2,
                       display: "flex",
                       flexDirection: "column",
+                      flexWrap: "wrap",
                       alignItems: "center",
                       justifyContent: "center",
                       textAlign: "center",
@@ -212,76 +149,11 @@ export default function PartnerDetails() {
             }}
           >
             {/* Title */}
-            <Typography
-              sx={{
-                fontSize: { xs: 24, md: 32 },
-                fontWeight: 800,
-                color: "#222",
-                mb: 2,
-              }}
-            >
-              {t("home.partners.exploreProducts")}
-            </Typography>
-
+            <Typography sx={{ fontSize: { xs: 16, md: 22 }, fontWeight: 800, color: "#222", mb: 2 }}>{t("home.partners.exploreProducts")}</Typography>
             {/* Description */}
-
-            <Typography
-              sx={{
-                maxWidth: 750,
-                mx: "auto",
-                color: "text.secondary",
-                lineHeight: 2,
-                fontSize: { xs: 14, md: 17 },
-              }}
-            >
+            <Typography sx={{ maxWidth: 750, mx: "auto", color: "text.secondary", lineHeight: 2, fontSize: { xs: 12, md: 15 } }}>
               {partner.description}
             </Typography>
-
-            {/* Products Images */}
-            {partner.products && partner.products.length > 0 && (
-              <Grid
-                container
-                spacing={{ xs: 2, md: 3 }}
-                justifyContent="center"
-                sx={{
-                  mt: { xs: 4, md: 5 },
-                }}
-              >
-                {partner.products.map((image, index) => (
-                  <Grid
-                    key={index}
-                    size={{
-                      xs: 12,
-                      sm: 6,
-                      md: 4,
-                    }}
-                  >
-                    <Box
-                      component="img"
-                      src={image}
-                      alt={`${partner.title} product ${index + 1}`}
-                      sx={{
-                        width: "100%",
-                        height: { xs: 200, sm: 220, md: 240 },
-                        objectFit: "contain",
-                        display: "block",
-                        backgroundColor: "#fff",
-                        border: "1px solid #E5DED1",
-                        borderRadius: 2,
-                        p: 2,
-                        boxShadow: "0 5px 18px rgba(0,0,0,0.06)",
-                        transition: "0.3s",
-
-                        "&:hover": {
-                          transform: "translateY(-4px)",
-                          boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-                        },
-                      }}
-                    />
-                  </Grid>
-                ))}
-              </Grid>
-            )}
           </Box>
         </Container>
       </Box>

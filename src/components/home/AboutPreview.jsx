@@ -1,7 +1,6 @@
-import { Box, Container, Grid, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, Container, Grid, Typography } from "@mui/material";
+import CustomButton from "../common/CustomButton";
 import { useTranslation } from "react-i18next";
-
 import SectionTitle from "../common/SectionTitle";
 
 export default function AboutPreview({
@@ -25,65 +24,26 @@ export default function AboutPreview({
   const isArabic = i18n.language === "ar";
 
   return (
-    <Box
-      component="section"
-      dir={isArabic ? "rtl" : "ltr"}
-      sx={{
-        backgroundColor: "#F9F8F5",
-        pt: 7,
-        pb: 1,
-        overflow: "hidden",
-      }}
-    >
+    <Box component="section" dir={isArabic ? "rtl" : "ltr"} sx={{ backgroundColor: "#F9F8F5", pt: 7, pb: 1, overflow: "hidden" }}>
       <Container maxWidth="xl">
-        <Grid container spacing={{ xs: 4, md: 10 }} alignItems="center">
+        <Grid container spacing={{ xs: 1, md: 3 }} alignItems="center">
           {/* =====================================================
               Text
           ====================================================== */}
-          <Grid
-            size={{ xs: 12, md: 6 }}
-            sx={{
-              order: { xs: 1, md: 1 },
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
+          <Grid size={{ xs: 12, md: 6 }} sx={{ order: { xs: 1, md: 1 }, display: "flex", alignItems: "center" }}>
             <Box sx={{ width: "100%" }}>
-              <SectionTitle eyebrow={subtitle} title={title} align={isArabic ? "right" : "left"} />
-              <Box sx={{ fontWeight: 500, fontSize: { xs: 16, md: 20 }, lineHeight: 1.8, color: "text.secondary" }}>{description}</Box>
+              <SectionTitle eyebrow={subtitle} title={title} description={description} align={isArabic ? "right" : "left"} />
               {buttonText && (
-                <Button
-                  component={Link}
-                  to="/about"
-                  variant="contained"
-                  sx={{
-                    mt: 3,
-                    minWidth: 135,
-                    height: 42,
-                    borderRadius: 1,
-                    backgroundColor: "primary.main",
-                    color: "#fff",
-                    fontWeight: 700,
-                    fontSize: 13,
-                    boxShadow: "0 5px 15px rgba(201,154,69,0.25)",
-                    "&:hover": { backgroundColor: "#B68A35" },
-                  }}
-                >
+                <CustomButton to="/about" sx={{ mt: 3, boxShadow: "0 5px 15px rgba(201,154,69,0.25)", "&:hover": { backgroundColor: "#B68A35" } }}>
                   {buttonText}
-                </Button>
+                </CustomButton>
               )}
             </Box>
           </Grid>
-
           {/* =====================================================
               Images
           ====================================================== */}
-          <Grid
-            size={{ xs: 12, md: 6 }}
-            sx={{
-              order: { xs: 2, md: 2 },
-            }}
-          >
+          <Grid size={{ xs: 12, md: 6 }} sx={{ order: { xs: 2, md: 2 } }}>
             <Box sx={{ position: "relative", width: "100%", maxWidth: 600, height: imageHeight || { xs: 350, sm: 400, md: 550 }, mx: "auto" }}>
               {image1 && (
                 <Box
@@ -94,16 +54,8 @@ export default function AboutPreview({
                     position: "absolute",
                     top: "0%",
                     left: "2%",
-                    width: {
-                      xs: "40%",
-                      sm: "43%",
-                      md: "45%",
-                    },
-                    height: {
-                      xs: 180,
-                      sm: 240,
-                      md: 300,
-                    },
+                    width: { xs: "40%", sm: "43%", md: "45%" },
+                    height: { xs: 180, sm: 240, md: 300 },
                     objectFit: "cover",
                     borderRadius: { xs: 2, md: 3 },
                     boxShadow: "0 8px 30px rgba(0,0,0,0.08)",
@@ -119,16 +71,8 @@ export default function AboutPreview({
                     position: "absolute",
                     top: "28%",
                     left: "53%",
-                    width: {
-                      xs: "40%",
-                      sm: "43%",
-                      md: "45%",
-                    },
-                    height: {
-                      xs: 180,
-                      sm: 240,
-                      md: 300,
-                    },
+                    width: { xs: "40%", sm: "43%", md: "45%" },
+                    height: { xs: 180, sm: 240, md: 300 },
                     objectFit: "cover",
                     borderRadius: { xs: 2, md: 3 },
                     boxShadow: "0 8px 30px rgba(0,0,0,0.08)",
@@ -242,17 +186,7 @@ export default function AboutPreview({
                       zIndex: 3,
                     }}
                   >
-                    <Box
-                      component="img"
-                      src={image4}
-                      alt=""
-                      sx={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
+                    <Box component="img" src={image4} alt="" sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   </Box>
                 </>
               )}
@@ -292,24 +226,9 @@ export default function AboutPreview({
                   />
                 )}
                 {/* ================= Years ================= */}
-                <Typography
-                  sx={{
-                    fontSize: { xs: 18, sm: 22, md: 32 },
-                    fontWeight: 800,
-                    lineHeight: 1,
-                  }}
-                >
-                  +8
-                </Typography>
+                <Typography sx={{ fontSize: { xs: 18, sm: 22, md: 32 }, fontWeight: 800, lineHeight: 1 }}>+8</Typography>
                 {/* ================= Experience ================= */}
-                <Typography
-                  sx={{
-                    fontSize: { xs: 8, sm: 10, md: 20 },
-                    fontWeight: 800,
-                    mt: { xs: 0.5, sm: 0.7, md: 1 },
-                    px: 0.5,
-                  }}
-                >
+                <Typography sx={{ fontSize: { xs: 8, sm: 10, md: 20 }, fontWeight: 800, mt: { xs: 0.5, sm: 0.7, md: 1 }, px: 0.5 }}>
                   {experience}
                 </Typography>
               </Box>

@@ -28,7 +28,7 @@ const getTheme = (direction = "rtl") =>
     },
 
     typography: {
-      fontFamily: direction === "rtl" ? '"Rubik", sans-serif' : '"Monda", sans-serif',
+      fontFamily: direction === "rtl" ? '"Noto Kufi Arabic", sans-serif' : '"Monda", sans-serif',
 
       h1: {
         fontWeight: 800,
@@ -47,10 +47,6 @@ const getTheme = (direction = "rtl") =>
       },
 
       h5: {
-        fontWeight: 700,
-      },
-
-      button: {
         fontWeight: 700,
       },
     },

@@ -4,7 +4,7 @@ import "./i18n";
 import { BrowserRouter } from "react-router-dom";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { useTranslation } from "react-i18next";
-
+import "./App.css";
 import App from "./App";
 import getTheme from "./theme/theme";
 

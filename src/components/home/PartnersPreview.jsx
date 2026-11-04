@@ -1,9 +1,9 @@
 import { Box, Container } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import PartnerSwiper from "../partners/PartnerSwiper.jsx";
 import SectionHeader from "../common/SectionHeader.jsx";
+import CustomButton from "../common/CustomButton";
 
 export default function PartnersPreview() {
   const { t, i18n } = useTranslation();
@@ -28,9 +28,6 @@ export default function PartnersPreview() {
           title={t("home.partners.title")}
           subtitle={t("home.partners.subtitle")}
           description={t("home.partners.description")}
-          titleSize={{ xs: 20, md: 38 }}
-          subtitleSize={{ xs: 15, md: 24 }}
-          descriptionSize={{ xs: 14, md: 18 }}
           maxWidthTitle={600}
           maxWidthSubtitle={500}
           maxWidthDescription={850}
@@ -38,14 +35,8 @@ export default function PartnersPreview() {
 
         {/* Partners Swiper */}
         <PartnerSwiper />
-
         {/* More Button */}
-        <Box
-          sx={{
-            textAlign: "center",
-            mt: 3,
-          }}
-        >
+        {/* <Box sx={{ textAlign: "center", mt: 3 }}>
           <Box
             component={Link}
             to="/partners"
@@ -59,14 +50,18 @@ export default function PartnersPreview() {
               fontWeight: 700,
               textDecoration: "none",
               transition: "0.3s",
-
-              "&:hover": {
-                backgroundColor: "primary.dark",
-              },
+              "&:hover": { backgroundColor: "primary.dark" },
             }}
           >
             {t("home.partners.more")}
           </Box>
+        </Box> */}
+
+        {/* More Button */}
+        <Box sx={{ textAlign: "center", mt: 3 }}>
+          <CustomButton to="/partners" sx={{ px: 3, py: 1.5, textDecoration: "none" }}>
+            {t("home.partners.more")}
+          </CustomButton>
         </Box>
       </Container>
     </Box>

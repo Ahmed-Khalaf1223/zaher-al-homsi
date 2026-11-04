@@ -1,11 +1,13 @@
-import { Box, Container, Grid, Paper, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+
+import SectionTitle from "../common/SectionTitle";
 
 import { useTranslation } from "react-i18next";
 import Features1 from "../../assets/icons/Features1.png";
 import Features2 from "../../assets/icons/Features2.png";
 import Features3 from "../../assets/icons/Features3.png";
 import Features4 from "../../assets/icons/Features4.png";
+import CustomButton from "../common/CustomButton";
 
 const features = [
   {
@@ -30,7 +32,7 @@ const features = [
   },
 ];
 
-export default function Features() {
+export default function Features({ showButton = true }) {
   const { t, i18n } = useTranslation();
 
   const isArabic = i18n.language === "ar";
@@ -46,76 +48,19 @@ export default function Features() {
     >
       <Container maxWidth="xl">
         {/* ================= Header ================= */}
-        <Box
-          sx={{
-            textAlign: isArabic ? "right" : "left",
-            mb: 3,
-          }}
-        >
-          <Typography
-            sx={{
-              fontSize: { xs: 28, md: 34 },
-              fontWeight: 800,
-              color: "#151515",
-              mb: 1,
-            }}
-          >
-            {t("home.features.subtitle")}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: 19, md: 26 },
-              fontWeight: 700,
-              color: "primary.main",
-              mb: 2,
-            }}
-          >
-            {t("home.features.title")}
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: { xs: 14, md: 18 },
-              fontWeight: 400,
-              lineHeight: 1.8,
-              color: "text.primary",
-              maxWidth: 750,
-              ml: isArabic ? "auto" : 0,
-              mr: isArabic ? 0 : "auto",
-            }}
-          >
-            {t("home.features.description")}
-          </Typography>
-        </Box>
+        <SectionTitle
+          eyebrow={t("home.features.subtitle")}
+          title={t("home.features.title")}
+          description={t("home.features.description")}
+          align={isArabic ? "right" : "left"}
+        />
 
         {/* ================= Button ================= */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            mb: 2,
-          }}
-        >
-          <Button
-            component={Link}
-            to="/about"
-            variant="contained"
-            sx={{
-              minWidth: 135,
-              height: 48,
-              borderRadius: 1,
-              backgroundColor: "primary.main",
-              color: "#fff",
-              fontWeight: 700,
-              fontSize: { xs: 14, md: 18 },
-              boxShadow: "0 4px 10px rgba(0,0,0,0.12)",
-              "&:hover": {
-                backgroundColor: "#B68A35",
-              },
-            }}
-          >
-            {t("home.features.more")}
-          </Button>
-        </Box>
+        {showButton && (
+          <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+            <CustomButton>{t("home.features.more")}</CustomButton>
+          </Box>
+        )}
 
         {/* ================= Features ================= */}
         <Grid container spacing={2.5}>

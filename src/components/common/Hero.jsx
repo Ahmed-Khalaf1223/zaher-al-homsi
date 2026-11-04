@@ -27,13 +27,8 @@ export default function Hero({ title, image, breadcrumb = [] }) {
       }}
     >
       <Container maxWidth="xl">
-        <Box
-          sx={{
-            textAlign: isArabic ? "right" : "left",
-            mr: { xs: 0, md: 3 },
-          }}
-        >
-          <Typography variant="h1" sx={{ color: "#fff", fontSize: { xs: 32, md: 48 }, fontWeight: 800, mb: 2 }}>
+        <Box sx={{ textAlign: isArabic ? "right" : "left", mr: { xs: 0, md: 3 } }}>
+          <Typography variant="h1" sx={{ color: "#fff", fontSize: { xs: 22, md: 32 }, fontWeight: 700, mb: 2 }}>
             {title}
           </Typography>
           <Box

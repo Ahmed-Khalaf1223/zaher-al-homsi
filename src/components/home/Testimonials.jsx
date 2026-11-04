@@ -37,15 +37,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <Box
-      component="section"
-      dir={isArabic ? "rtl" : "ltr"}
-      sx={{
-        backgroundColor: "#F8F1E5",
-        py: { xs: 7, md: 10 },
-        overflow: "hidden",
-      }}
-    >
+    <Box component="section" dir={isArabic ? "rtl" : "ltr"} sx={{ backgroundColor: "#F8F1E5", py: { xs: 7, md: 10 }, overflow: "hidden" }}>
       <Container maxWidth="lg">
         {/* =========================
             Section Header

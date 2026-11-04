@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../assets/images/logo.png";
 
 import { AppBar, Box, Button, Container, Drawer, IconButton, Stack, ThemeProvider, Toolbar, useMediaQuery, useTheme } from "@mui/material";
@@ -47,6 +47,19 @@ export default function Navbar() {
     },
   ];
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       {/* ==================== Top Bar ==================== */}
@@ -65,8 +78,8 @@ export default function Navbar() {
         </Box>
       </Box>
       {/* ==================== Main Navbar ==================== */}
-      <AppBar position="sticky" elevation={0} dir={direction} sx={{ backgroundColor: "transparent", color: "text.primary", boxShadow: "none" }}>
-        <Container maxWidth="xl" sx={{ position: "absolute", mt: { xs: 0, md: 1 } }}>
+      <AppBar position="fixed" elevation={0} dir={direction} sx={{ backgroundColor: "transparent", color: "text.primary", boxShadow: "none" }}>
+        <Container maxWidth="xl" sx={{ position: "relative", mt: scrolled ? 0 : { xs: 3, md: 6 }, transition: "margin-top 0.3s ease" }}>
           <Toolbar
             disableGutters
             sx={{
@@ -100,8 +113,8 @@ export default function Navbar() {
                       minWidth: "auto",
                       px: { md: 1, lg: 1.2 },
                       color: "text.primary",
-                      fontSize: { md: 15, lg: 17 },
-                      fontWeight: 600,
+                      fontWeight: 500,
+                      fontSize: { md: 14, lg: 16 },
                       "&:hover": { backgroundColor: "transparent", color: "primary.main" },
                       "&.active": {
                         color: "primary.main",
