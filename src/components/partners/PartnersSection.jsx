@@ -4,9 +4,7 @@ import { useTranslation } from "react-i18next";
 import SectionHeader from "../common/SectionHeader";
 import PartnerCard from "./PartnerCard";
 
-import partners1 from "../../assets/icons/partners1.png";
-import partners2 from "../../assets/icons/partners2.png";
-import partners3 from "../../assets/icons/partners3.png";
+import { partnerLogos } from "../../data/partners";
 
 export default function PartnersSection() {
   const { t, i18n } = useTranslation();
@@ -15,15 +13,12 @@ export default function PartnersSection() {
 
   const partnersData = t("home.partners.items", {
     returnObjects: true,
+    defaultValue: {},
   });
 
-  const partnerLogos = {
-    mando: partners1,
-    alSafa: partners2,
-    uniTrading: partners3,
-  };
+  const safePartnersData = partnersData && typeof partnersData === "object" && !Array.isArray(partnersData) ? partnersData : {};
 
-  const partners = Object.entries(partnersData).map(([id, partner]) => ({
+  const partners = Object.entries(safePartnersData).map(([id, partner]) => ({
     id,
     ...partner,
     logo: partnerLogos[id],
@@ -47,7 +42,7 @@ export default function PartnersSection() {
         <SectionHeader
           title={t("home.partners.title")}
           subtitle={t("home.partners.subtitle")}
-          description={t("home.partners.description")}s
+          description={t("home.partners.description")}
           maxWidthTitle={600}
           maxWidthSubtitle={500}
           maxWidthDescription={850}

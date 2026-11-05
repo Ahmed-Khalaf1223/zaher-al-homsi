@@ -4,13 +4,9 @@ import { LanguageOutlined, GroupsOutlined, PrecisionManufacturingOutlined, Verif
 
 import { Link, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import { partnerLogos } from "../data/partners";
 import Hero from "../components/common/Hero";
 import Partners_cover from "../assets/images/Partners_cover.jpg";
-
-import partners1 from "../assets/icons/partners1.png";
-import partners2 from "../assets/icons/partners2.png";
-import partners3 from "../assets/icons/partners3.png";
 
 const iconMap = {
   quality: VerifiedOutlined,
@@ -28,14 +24,12 @@ export default function PartnerDetails() {
 
   const partnersData = t("home.partners.items", {
     returnObjects: true,
+    defaultValue: {},
   });
-  const partner = partnersData[id];
 
-  const partnerLogos = {
-    mando: partners1,
-    alSafa: partners2,
-    uniTrading: partners3,
-  };
+  const safePartnersData = partnersData && typeof partnersData === "object" && !Array.isArray(partnersData) ? partnersData : {};
+
+  const partner = safePartnersData[id];
 
   const partnerLogo = partnerLogos[id];
 
@@ -102,8 +96,8 @@ export default function PartnerDetails() {
               Features
           ========================= */}
           <Grid container sx={{ mt: { xs: 6, md: 7 } }}>
-            {partner.features.map((feature, index) => {
-              const Icon = iconMap[feature.icon];
+            {(Array.isArray(partner.features) ? partner.features : []).map((feature, index) => {
+              const Icon = iconMap[feature.icon] || VerifiedOutlined;
               return (
                 <Grid key={feature.title} size={{ xs: 6, md: 3 }}>
                   <Box

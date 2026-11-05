@@ -28,7 +28,12 @@ export default function PartnerCard({ partner }) {
     >
       {/* Logo */}
       <Box sx={{ width: 110, height: 70, display: "flex", alignItems: "center", justifyContent: "center", mb: 2 }}>
-        <Box component="img" src={partner.logo} alt={partner.title} sx={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+        <Box
+          component="img"
+          src={partner.logo}
+          alt={partner.title || "Partner logo"}
+          sx={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }}
+        />
       </Box>
 
       {/* Title */}

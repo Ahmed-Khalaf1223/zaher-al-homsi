@@ -190,7 +190,15 @@
         "email": "Email Address",
         "type": "Inquiry Type",
         "notes": "Notes",
-        "submit": "Send"
+        "submit": "Send",
+        "sending": "Sending...",
+        "success": "Your message has been sent successfully. Thank you!",
+        "error": "Something went wrong. Please try again.",
+        "errors": {
+          "required": "This field is required",
+          "invalidEmail": "Invalid email address",
+          "invalidPhone": "Invalid phone number"
+        }
       }
     },
     "testimonials": {
