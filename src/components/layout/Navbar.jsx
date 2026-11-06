@@ -79,7 +79,7 @@ export default function Navbar() {
       </Box>
       {/* ==================== Main Navbar ==================== */}
       <AppBar position="fixed" elevation={0} dir={direction} sx={{ backgroundColor: "transparent", color: "text.primary", boxShadow: "none" }}>
-        <Container maxWidth="xl" sx={{ position: "relative", mt: scrolled ? 0 : { xs: 3, md: 6 }, transition: "margin-top 0.3s ease" }}>
+        <Container maxWidth="xl" sx={{ position: "relative", mt: scrolled ? 0 : 6, transition: "margin-top 0.3s ease" }}>
           <Toolbar
             disableGutters
             sx={{
@@ -145,7 +145,7 @@ export default function Navbar() {
             )}
             {/* ==================== Mobile Menu ==================== */}
             {isMobile && (
-              <IconButton onClick={() => setOpen(true)} color="secondary">
+              <IconButton onClick={() => setOpen(true)} color="secondary" aria-label={t("nav.openMenu", { defaultValue: "Open navigation menu" })}>
                 <MenuIcon />
               </IconButton>
             )}
